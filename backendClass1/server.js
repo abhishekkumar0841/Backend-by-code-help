@@ -25,12 +25,8 @@ app.post('/api/cars', (req, res)=>{
     res.send('Car submitted successfully')
 });
 
-// connecting database form mongoose--> mongoose is a ODB (object data modeling) by which we can connect our node/express from mongoDB
+// connecting database form mongoose--> mongoose is a ODM (object data modeling) by which we can connect our node/express from mongoDB
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/myDatabase', {
-    useNewUrlParser: true,  // these useNewUrlParser and useUnifiedTopology is nothing but it is a normal syntax for connecting mongodb
-    useUnifiedTopology: true,
-    family: 4
-})
+mongoose.connect('mongodb://127.0.0.1/myDatabase') // if we write mongoose.connect('mongodb://localhost:27017/myDatabase') , then we have to pass many objects ,if not then we got error but if we write like this mongoose.connect('mongodb://127.0.0.1/myDatabase') then we not have to pass
 .then(()=>{console.log("Connection successful")})
 .catch((err)=> {console.log("Error:", err)})
