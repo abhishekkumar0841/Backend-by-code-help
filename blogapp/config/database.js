@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 function dbConnect(){
-    mongoose.connect(process.env.DATABASE_URI).then(()=>{
+    mongoose.connect(process.env.DATABASE_URI, {
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true
+    }).then(()=>{
         console.log("Data connected successfully...")
     }).catch((err)=>{
         console.log("Something wrong while database connection!")
