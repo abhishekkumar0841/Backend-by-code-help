@@ -1,3 +1,11 @@
+<!-- Things to learn in this repo -->
+1. how to upload files on server
+2. how to upload images/video on cloudinary(cloud)
+3. how to upload images/video with size restriction 
+4. how to upload images/video with size optimization
+5. how to get mail after files of images are successfully uploaded on cloudinary.
+
+
 steps for setting up the cloudinary
 1. create account
 2. login
